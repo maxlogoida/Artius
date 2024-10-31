@@ -1,11 +1,19 @@
-import React, { useState } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
-import styles from './App.css';
+import Footer from './components/footer/footer';
+import Header from './components/header/header';
+import RouteComponent from './components/routes/routes';
+import { Wrapper } from './components/wrapper/wrapper';
 
-const App = () =>  {
-    return (
-        <div>Artius Blog</div>
-    );
-}
-
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Wrapper>
+        <Header />
+        <RouteComponent />
+        <Footer />
+      </Wrapper>
+    </BrowserRouter>
+  );
+};
 export default App;
