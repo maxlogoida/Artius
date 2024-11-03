@@ -527,6 +527,7 @@ fabric.properties
 
 /.idea/vcs.xml
 /.idea/.gitignore
+/.idea/course_3_ipz_2024.iml
 /.idea/git_toolbox_blame.xml
 /.idea/git_toolbox_prj.xml
 /.idea/modules.xml
