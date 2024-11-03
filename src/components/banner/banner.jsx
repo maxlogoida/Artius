@@ -2,7 +2,7 @@ import { BannerContainer, BannerInfo } from './styles';
 
 const Banner = () => {
   return (
-    <BannerContainer>
+    <BannerContainer data-cy="banner">
       <BannerInfo>
         <h3>FEATURED ARTICLE</h3>
         <h1>World’s Most Dangerous Technology Ever Made.</h1>
