@@ -4,7 +4,7 @@ import { FooterContainer } from './styles';
 
 const Footer = () => {
   return (
-    <FooterContainer>
+    <FooterContainer data-cy={'header-container'}>
       <div>
         <h3>want to connect?</h3>
         <center>

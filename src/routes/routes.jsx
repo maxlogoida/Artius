@@ -1,13 +1,13 @@
 import { Route, Routes } from 'react-router-dom';
 
-import About from '../../pages/about/about';
-import Create from '../../pages/create/create';
-import Home from '../../pages/home/home';
-import PostPage from '../../pages/postPage/postPage';
-import Profile from '../../pages/profile/profile';
-import Search from '../../pages/search/search';
-import SignIn from '../../pages/signIn/signIn';
-import SignUp from '../../pages/signUp/signUp';
+import About from '../pages/about/about';
+import Create from '../pages/create/create';
+import Home from '../pages/home/home';
+import PostPage from '../pages/postPage/postPage';
+import Profile from '../pages/profile/profile';
+import Search from '../pages/search/search';
+import SignIn from '../pages/signIn/signIn';
+import SignUp from '../pages/signUp/signUp';
 
 const RouteComponent = () => {
   return (

@@ -5,7 +5,7 @@ import { NavContainer, StyledLink } from './styles';
 
 const Nav = () => {
   return (
-    <NavContainer>
+    <NavContainer data-cy={'nav'}>
       <Link to="/">
         <img src={ArtiusLogo} alt="Artius" />
       </Link>

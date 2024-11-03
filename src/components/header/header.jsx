@@ -10,7 +10,7 @@ const Header = () => {
   const { isAuth, signOut } = useAuthContext();
 
   return (
-    <HeaderContainer>
+    <HeaderContainer data-cy={'header'}>
       <Nav />
       <div>
         <Link to={'/search'}>

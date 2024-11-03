@@ -2,7 +2,7 @@ import { PostContainer } from './styles';
 
 const Post = ({ post }) => {
   return (
-    <PostContainer>
+    <PostContainer data-cy={'post'}>
       <div>
         <img src={post.img} alt="" />
       </div>
