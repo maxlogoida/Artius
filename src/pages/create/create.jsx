@@ -70,7 +70,7 @@ const Create = () => {
     <CreateContainer>
       <div>
         <img src={AddBlogImg} alt="Add Blog" />
-        <h3>Add Blog</h3>
+        <h3 data-cy={'create-title'}>Add Blog</h3>
       </div>
       <CreateForm>
         <div>
@@ -80,14 +80,23 @@ const Create = () => {
             name="imageUrl"
             value={formState.imageUrl}
             onChange={handleInputChange}
+            data-cy={'create-input-img'}
           />
-          <Input type="text" placeholder="Title" name="title" value={formState.title} onChange={handleInputChange} />
+          <Input
+            type="text"
+            placeholder="Title"
+            name="title"
+            value={formState.title}
+            onChange={handleInputChange}
+            data-cy={'create-input-title'}
+          />
           <Input
             type="text"
             placeholder="Category"
             name="category"
             value={formState.category}
             onChange={handleInputChange}
+            data-cy={'create-input-category'}
           />
         </div>
         <div className="secondFormContainer">
@@ -115,12 +124,15 @@ const Create = () => {
               }}
               onEditorChange={handleEditorChange}
               value={formState.content}
+              data-cy={'create-input-editor'}
             />
           </div>
         </div>
       </CreateForm>
       <div className="button">
-        <Button onClick={handleSubmit}>Create</Button>
+        <Button onClick={handleSubmit} data-cy={'create-input-submit'}>
+          Create
+        </Button>
       </div>
     </CreateContainer>
   );

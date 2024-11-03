@@ -10,8 +10,12 @@ const Nav = () => {
         <img src={ArtiusLogo} alt="Artius" />
       </Link>
       <StyledLink to="/">Home</StyledLink>
-      <StyledLink to="/about">About</StyledLink>
-      <StyledLink to="/create">Create</StyledLink>
+      <StyledLink to="/about" data-cy={'about'}>
+        About
+      </StyledLink>
+      <StyledLink to="/create" data-cy={'create'}>
+        Create
+      </StyledLink>
     </NavContainer>
   );
 };

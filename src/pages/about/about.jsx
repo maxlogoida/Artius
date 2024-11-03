@@ -18,7 +18,7 @@ const About = () => {
       <AboutContainerWrapper>
         <AboutContainerFirst>
           <div>
-            <h4>We tell stories that drives the heart.</h4>
+            <h4 data-cy={'about-title'}>We tell stories that drives the heart.</h4>
             <p>
               Laboris consectetur sunt nulla eiusmod voluptate eiusmod dolor nisi qui dolor cillum fugiat ad. Id sit
               mollit labore sunt sit culpa qui minim pariatur et officia elit id. Tempor cupidatat veniam esse ad veniam

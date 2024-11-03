@@ -16,7 +16,7 @@ const Profile = () => {
     <ProfileContainer>
       <ProfileInfo>
         <div className="profile-info-wrapper">
-          <span>{profileName}</span>
+          <span data-cy={'profile-name'}>{profileName}</span>
           <h3>Laborum Ullamco Sunt id ut Sunt</h3>
           <span>{new Date().toLocaleDateString()}</span>
           <p>

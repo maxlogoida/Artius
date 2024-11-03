@@ -9,11 +9,11 @@ const PostPage = () => {
   const post = posts.find((item) => item.id === Number(id));
 
   return (
-    <PostPageContainer>
+    <PostPageContainer data-cy={`post-${post.id}`}>
       <img src={post.img} alt="PostImg" />
       <div>
         <h3>{post.title}</h3>
-        <p>{post.description}</p>
+        <div className="editor-description" dangerouslySetInnerHTML={{ __html: post.description }} />
       </div>
     </PostPageContainer>
   );

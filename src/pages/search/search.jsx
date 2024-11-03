@@ -21,13 +21,14 @@ const Search = () => {
             placeholder="Search category"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
+            data-cy={'search-input'}
           />
           <CiSearch size={30} />
         </div>
 
         {filteredPosts.length > 0 ? (
           filteredPosts.map((post) => (
-            <Link key={post.id} to={`/post/${post.id}`}>
+            <Link key={post.id} to={`/post/${post.id}`} data-cy={'post-link'}>
               <Post post={post} />
             </Link>
           ))

@@ -51,7 +51,9 @@ const SignIn = () => {
           />
         </label>
         <span>
-          <Link to={'/sign-up'}>Don&#39;t have an account?</Link>
+          <Link to={'/sign-up'} data-cy={'sign-up-link'}>
+            Don&#39;t have an account?
+          </Link>
         </span>
         <Button onClick={handleSubmit}>Sign In</Button>
       </SignForm>
