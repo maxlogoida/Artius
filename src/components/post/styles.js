@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 export const PostContainer = styled.div`
   display: flex;
-  max-width: 812px;
+  width: 812px;
   gap: 37px;
+  overflow: hidden;
   font-family:
     system-ui,
     -apple-system,
@@ -40,6 +41,10 @@ export const PostContainer = styled.div`
     color: grey;
     font-weight: 400;
     font-size: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   h2 {
@@ -47,6 +52,10 @@ export const PostContainer = styled.div`
     margin: 5px 0;
     font-size: 33px;
     font-family: 'Open Sans';
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   span {
@@ -64,6 +73,5 @@ export const PostContainer = styled.div`
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: ellipsis;
   }
 `;

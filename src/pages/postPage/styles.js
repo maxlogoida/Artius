@@ -18,6 +18,7 @@ export const PostPageContainer = styled.div`
     font-weight: 700;
     font-family: 'Open Suns';
     text-align: center;
+    overflow: hidden;
   }
 
   p {

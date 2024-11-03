@@ -17,7 +17,12 @@ const Header = () => {
           <CiSearch size={30} />
         </Link>
         {isAuth ? (
-          <Button onClick={signOut}>Sign Out</Button>
+          <div>
+            <Link to={'/profile'}>
+              <button className="profile-button">Profile</button>
+            </Link>
+            <Button onClick={signOut}>Sign Out</Button>
+          </div>
         ) : (
           <Link to={'/sign-in'}>
             <Button>Sign in</Button>
