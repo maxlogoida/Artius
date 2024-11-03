@@ -1,17 +1,24 @@
 import { Link } from 'react-router-dom';
 
 import Post from '../../components/post/post';
-import { postsData } from '../../constants';
+import useLocalStorage from '../../hooks/useLocalStorage';
 import { ProfileContainer, ProfileInfo } from './styles';
 
 const Profile = () => {
+  const { value: users } = useLocalStorage('users', []);
+  const { value: posts } = useLocalStorage('posts', []);
+
+  const profileName = users.length > 0 ? users[0].username : 'Anonymous';
+
+  const userPosts = posts.filter((post) => post.author === profileName);
+
   return (
     <ProfileContainer>
       <ProfileInfo>
         <div className="profile-info-wrapper">
-          <span>INTERIOR</span>
+          <span>{profileName}</span>
           <h3>Laborum Ullamco Sunt id ut Sunt</h3>
-          <span>May 7, 2019</span>
+          <span>{new Date().toLocaleDateString()}</span>
           <p>
             Proident aliquip velit qui commodo officia qui consectetur dolor ullamco aliquip elit incididunt. Ea minim
             ex consectetur excepteur. Ex laborum nostrud mollit sint consectetur Lorem amet aliqua do enim. Commodo duis
@@ -21,11 +28,15 @@ const Profile = () => {
       </ProfileInfo>
 
       <div className="list-wrapper">
-        {postsData.map((post) => (
-          <Link key={post.id} to={`/post/${post.id}`}>
-            <Post post={post} />
-          </Link>
-        ))}
+        {userPosts.length > 0 ? (
+          userPosts.map((post) => (
+            <Link key={post.id} to={`/post/${post.id}`}>
+              <Post post={post} />
+            </Link>
+          ))
+        ) : (
+          <p>No posts available for this user.</p>
+        )}
       </div>
     </ProfileContainer>
   );

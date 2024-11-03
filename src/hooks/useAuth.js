@@ -3,9 +3,13 @@ import useLocalStorage from './useLocalStorage';
 const useAuth = () => {
   const { value: users, setLocalStorage } = useLocalStorage('users', []);
   const { value: isAuth, setLocalStorage: setIsAuth } = useLocalStorage('isAuth', false);
+
   const signIn = ({ username, password }) => {
-    const user = users.find((user) => user.username === username && user.password === password);
-    if (user) {
+    const userIndex = users.findIndex((user) => user.username === username && user.password === password);
+    if (userIndex !== -1) {
+      const user = users[userIndex];
+      const updatedUsers = [user, ...users.filter((_, index) => index !== userIndex)];
+      setLocalStorage(updatedUsers);
       setIsAuth(true);
       alert('You are logged in');
       return user;
@@ -22,7 +26,7 @@ const useAuth = () => {
       return null;
     }
     const newUser = { username, password };
-    setLocalStorage([...users, newUser]);
+    setLocalStorage([newUser, ...users]);
     setIsAuth(true);
     alert('You are signed up');
     return newUser;

@@ -5,9 +5,17 @@ import AddBlogImg from '../../assets/Banner.png';
 import Button from '../../components/button/button';
 import Input from '../../components/input/input';
 import { fileEditorConfig } from '../../constants';
+import useLocalStorage from '../../hooks/useLocalStorage';
+import usePosts from '../../hooks/usePosts';
 import { CreateContainer, CreateForm } from './styles';
 
 const Create = () => {
+  const { addPost } = usePosts();
+
+  const { value: users } = useLocalStorage('users', []);
+
+  const profileName = users.length > 0 ? users[0].username : 'Anonymous';
+
   const [formState, setFormState] = useState({
     imageUrl: '',
     title: '',
@@ -31,7 +39,22 @@ const Create = () => {
   };
 
   const handleSubmit = () => {
-    console.log('Form submitted:', formState);
+    if (!formState.imageUrl || !formState.title || !formState.category || !formState.content) {
+      alert('All fields are required!');
+      return;
+    }
+
+    const newPost = {
+      id: Date.now(),
+      img: formState.imageUrl,
+      category: formState.category,
+      title: formState.title,
+      author: profileName,
+      date: new Date().toLocaleDateString(),
+      description: formState.content,
+    };
+
+    addPost(newPost);
 
     setFormState({
       imageUrl: '',
@@ -39,19 +62,21 @@ const Create = () => {
       category: '',
       content: '',
     });
+
+    console.log('Post created:', newPost);
   };
 
   return (
     <CreateContainer>
       <div>
-        <img src={AddBlogImg} alt="AddBlogImg" />
+        <img src={AddBlogImg} alt="Add Blog" />
         <h3>Add Blog</h3>
       </div>
       <CreateForm>
         <div>
           <Input
             type="text"
-            placeholder="Image url"
+            placeholder="Image URL"
             name="imageUrl"
             value={formState.imageUrl}
             onChange={handleInputChange}
@@ -68,7 +93,7 @@ const Create = () => {
         <div className="secondFormContainer">
           <div>
             <div className="formImgBackground">
-              <img src={formState.imageUrl} alt={formState.title} />
+              {formState.imageUrl && <img src={formState.imageUrl} alt={formState.title} />}
             </div>
           </div>
           <div>

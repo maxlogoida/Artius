@@ -3,13 +3,14 @@ import { CiSearch } from 'react-icons/ci';
 import { Link } from 'react-router-dom';
 
 import Post from '../../components/post/post';
-import { postsData } from '../../constants';
+import usePosts from '../../hooks/usePosts';
 import { SearchContainer } from './styles';
 
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState('');
+  const { posts } = usePosts();
 
-  const filteredPosts = postsData.filter((post) => post.category.toLowerCase().includes(searchTerm.toLowerCase()));
+  const filteredPosts = posts.filter((post) => post.category.toLowerCase().includes(searchTerm.toLowerCase()));
 
   return (
     <SearchContainer>

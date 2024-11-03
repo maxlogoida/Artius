@@ -1,7 +1,7 @@
 export const postsData = [
   {
     id: 1,
-    img: 'https://lh4.googleusercontent.com/aWdHDhnRJb-370m_Fx7qW6NPWqFWVI-3wilE_vp2pLk6CHwcG-ai3t4X-2PUO1rjL1Yhju-5S4N5YRsw7hLj9Ie7UY1fSGI03SNtc4UTYx1DXGeEmZT-URuDZr4e4kibiNZvMjRlCuWqkrUrYW3GHWY',
+    img: 'https://that-which.com/wp-content/uploads/2023/07/The-Roots-of-Existentialism-Socrates--1024x1012.jpeg',
     category: 'Philosophy',
     title: 'The Roots of Existentialism',
     author: 'Jean-Paul Sartre',
@@ -17,17 +17,7 @@ Aliquip mollit sunt qui irure. Irure ullamco Lorem excepteur dolor qui ea ad qui
   },
   {
     id: 2,
-    img: 'https://lh4.googleusercontent.com/aWdHDhnRJb-370m_Fx7qW6NPWqFWVI-3wilE_vp2pLk6CHwcG-ai3t4X-2PUO1rjL1Yhju-5S4N5YRsw7hLj9Ie7UY1fSGI03SNtc4UTYx1DXGeEmZT-URuDZr4e4kibiNZvMjRlCuWqkrUrYW3GHWY',
-    category: 'History',
-    title: 'The Rise of Empires',
-    author: 'Anna Ivanova',
-    date: '25.03.1456',
-    description:
-      'Ea qui dolor aute cupidatat ad pariatur proident. Mollit nulla tempor aute reprehenderit ut dolore mollit nisi consequat excepteur ex officia pariatur irure.',
-  },
-  {
-    id: 3,
-    img: 'https://lh4.googleusercontent.com/aWdHDhnRJb-370m_Fx7qW6NPWqFWVI-3wilE_vp2pLk6CHwcG-ai3t4X-2PUO1rjL1Yhju-5S4N5YRsw7hLj9Ie7UY1fSGI03SNtc4UTYx1DXGeEmZT-URuDZr4e4kibiNZvMjRlCuWqkrUrYW3GHWY',
+    img: 'https://www.poetadiazcastro.com/wp-content/uploads/2017/07/siglo-de-oro-1024x585.jpg',
     category: 'Literature',
     title: 'Poetry of the Golden Age',
     author: 'Fyodor Petrov',
@@ -36,8 +26,8 @@ Aliquip mollit sunt qui irure. Irure ullamco Lorem excepteur dolor qui ea ad qui
       'Ea qui dolor aute cupidatat ad pariatur proident. Mollit nulla tempor aute reprehenderit ut dolore mollit nisi consequat excepteur ex officia pariatur irure.',
   },
   {
-    id: 4,
-    img: 'https://lh4.googleusercontent.com/aWdHDhnRJb-370m_Fx7qW6NPWqFWVI-3wilE_vp2pLk6CHwcG-ai3t4X-2PUO1rjL1Yhju-5S4N5YRsw7hLj9Ie7UY1fSGI03SNtc4UTYx1DXGeEmZT-URuDZr4e4kibiNZvMjRlCuWqkrUrYW3GHWY',
+    id: 3,
+    img: 'https://www.ducksters.com/history/renaissance_galileo_telescope.jpg',
     category: 'Science',
     title: 'Astronomy in the Renaissance',
     author: 'Galileo Galilei',

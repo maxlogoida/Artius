@@ -1,11 +1,13 @@
 import { useParams } from 'react-router-dom';
 
-import { postsData } from '../../constants';
+import usePosts from '../../hooks/usePosts';
 import { PostPageContainer } from './styles';
 
 const PostPage = () => {
   const { id } = useParams();
-  const post = postsData.find((item) => item.id === Number(id));
+  const { posts } = usePosts();
+  const post = posts.find((item) => item.id === Number(id));
+
   return (
     <PostPageContainer>
       <img src={post.img} alt="PostImg" />
