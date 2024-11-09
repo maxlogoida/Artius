@@ -1,5 +1,6 @@
 import { Editor } from '@tinymce/tinymce-react';
 import { useState } from 'react';
+import { Navigate } from 'react-router-dom';
 
 import AddBlogImg from '../../assets/Banner.png';
 import Button from '../../components/button/button';
@@ -7,10 +8,13 @@ import Input from '../../components/input/input';
 import { fileEditorConfig } from '../../constants';
 import useLocalStorage from '../../hooks/useLocalStorage';
 import usePosts from '../../hooks/usePosts';
+import { useAuthContext } from '../../providers/authProvider';
 import { CreateContainer, CreateForm } from './styles';
 
 const Create = () => {
   const { addPost } = usePosts();
+
+  const { isAuth } = useAuthContext();
 
   const { value: users } = useLocalStorage('users', []);
 
@@ -22,6 +26,10 @@ const Create = () => {
     category: '',
     content: '',
   });
+
+  if (!isAuth) {
+    return <Navigate to={'/'} replace={true} />;
+  }
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
