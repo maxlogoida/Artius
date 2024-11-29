@@ -12,7 +12,7 @@ const Post = ({ post }) => {
         <span>
           <span>{post.author}</span>|<span>{post.date}</span>
         </span>
-        <p>{post.description}</p>
+        <div className="editor-description" dangerouslySetInnerHTML={{ __html: post.description }} />
       </div>
     </PostContainer>
   );

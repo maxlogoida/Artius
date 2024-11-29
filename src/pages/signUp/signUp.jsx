@@ -45,7 +45,13 @@ const SignUp = () => {
         <p>Sign up to get the most out of Artius.</p>
         <label>
           <LuUser size={24} />
-          <Input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
+          <Input
+            type="text"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            data-cy={'username'}
+          />
         </label>
         <label>
           <RiKey2Line size={24} />
@@ -54,6 +60,7 @@ const SignUp = () => {
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            data-cy={'password'}
           />
         </label>
         <label>
@@ -63,12 +70,15 @@ const SignUp = () => {
             placeholder="Confirm password"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
+            data-cy={'confirm-password'}
           />
         </label>
         <span>
           <Link to={'/sign-in'}>Already have an account?</Link>
         </span>
-        <Button onClick={handleSubmit}>Sign Up</Button>
+        <Button onClick={handleSubmit} data-cy={'submit'}>
+          Sign Up
+        </Button>
       </SignForm>
     </SignContainer>
   );

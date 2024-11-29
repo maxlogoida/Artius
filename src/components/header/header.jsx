@@ -13,18 +13,18 @@ const Header = () => {
     <HeaderContainer data-cy={'header'}>
       <Nav />
       <div>
-        <Link to={'/search'}>
+        <Link to={'/search'} data-cy={'search-link'}>
           <CiSearch size={30} />
         </Link>
         {isAuth ? (
           <div>
-            <Link to={'/profile'}>
+            <Link to={'/profile'} data-cy={'profile-link'}>
               <button className="profile-button">Profile</button>
             </Link>
             <Button onClick={signOut}>Sign Out</Button>
           </div>
         ) : (
-          <Link to={'/sign-in'}>
+          <Link to={'/sign-in'} data-cy={'sign-in'}>
             <Button>Sign in</Button>
           </Link>
         )}

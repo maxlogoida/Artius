@@ -21,7 +21,7 @@ export const PostPageContainer = styled.div`
     overflow: hidden;
   }
 
-  p {
+  .editor-description {
     font-size: 16px;
     padding-top: 60px;
   }

@@ -13,7 +13,7 @@ const Home = () => {
       <Banner />
       <div className="list-wrapper">
         {posts.map((post) => (
-          <Link key={post.id} to={`/post/${post.id}`}>
+          <Link key={post.id} to={`/post/${post.id}`} data-cy={`post-link-${post.id}`}>
             <Post post={post} />
           </Link>
         ))}
